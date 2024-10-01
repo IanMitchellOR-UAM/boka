@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>bokaWeb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <resource-ref>
+  	<description>DB Connection</description>
+  	<res-ref-name>jdbc/TestDS</res-ref-name>
+  	<res-type>javax.sql.DataSource</res-type>
+  	<res-auth>Container</res-auth>
+  </resource-ref>
+  <servlet>
+  	<description>Servlet de mantenimiento de la tabla producto</description>
+  	<display-name>AdminProducto</display-name>
+  	<servlet-name>AdminProducto</servlet-name>
+  	<servlet-class>mx.uam.azc.estelares.bocanika.controller.AdminProductoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AdminProducto</servlet-name>
+  	<url-pattern>/AdminProducto</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<description>Servlet de mantenimiento de la tabla tipo_producto</description>
+  	<display-name>AdminTipoProducto</display-name>
+  	<servlet-name>AdminTipoProducto</servlet-name>
+  	<servlet-class>mx.uam.azc.estelares.bocanika.controller.AdminTipoProducto</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AdminTipoProducto</servlet-name>
+  	<url-pattern>/AdminTipoProducto</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<description>Servlet de mantenimiento de la tabla ingrediente</description>
+  	<display-name>AdminIngrediente</display-name>
+  	<servlet-name>AdminIngrediente</servlet-name>
+  	<servlet-class>mx.uam.azc.estelares.bocanika.controller.AdminIngrediente</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AdminIngrediente</servlet-name>
+  	<url-pattern>/AdminIngrediente</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<description>Servlet del exportador a XLS de Producto</description>
+  	<display-name>ExportToExcel</display-name>
+  	<servlet-name>ExportToExcel</servlet-name>
+  	<servlet-class>mx.uam.azc.estelares.bocanika.controller.ExportToExcelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ExportToExcel</servlet-name>
+  	<url-pattern>/ExportToExcel</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<description>Servlet del exportador a PDF de Producto</description>
+  	<display-name>ExportToPDF</display-name>
+  	<servlet-name>ExportToPDF</servlet-name>
+  	<servlet-class>mx.uam.azc.estelares.bocanika.controller.ExportToPDFServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ExportToPDF</servlet-name>
+  	<url-pattern>/ExportToPDF</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<description>Servlet del exportador a HTML de Producto</description>
+  	<display-name>ExportToHTML</display-name>
+  	<servlet-name>ExportToHTML</servlet-name>
+  	<servlet-class>mx.uam.azc.estelares.bocanika.controller.ExportToHTMLServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ExportToHTML</servlet-name>
+  	<url-pattern>/ExportToHTML</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<description>Servlet del login</description>
+  	<display-name>Login</display-name>
+  	<servlet-name>Login</servlet-name>
+  	<servlet-class>mx.uam.azc.estelares.bocanika.controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+</web-app>
